@@ -25,7 +25,7 @@ const Home = () => {
         transition={{ duration: 0.5, delay: 0.2 }}
         className="text-lg text-center text-neutral-400 max-w-4xl mx-auto mb-10"
       >
-        I’m a freelance web developer focused on helping startups, individuals, and small businesses grow online with modern, high-performance websites. From eye-catching designs to functional e-commerce stores — I’ll bring your vision to life.
+        We're a team of web developers focused on helping startups, individuals, and small businesses grow online with modern, high-performance websites. From eye-catching designs to functional e-commerce stores — we’ll bring your vision to reality.
       </motion.p>
 
       <div className="flex flex-col sm:flex-row justify-center gap-4 mb-16">
@@ -33,7 +33,7 @@ const Home = () => {
           to="portfolio"
           className="bg-gradient-to-r from-orange-500 to-orange-800 py-3 px-6 rounded-md text-center font-medium transition hover:opacity-90"
         >
-          View My Portfolio
+          View Our Portfolios
         </Link>
         <Link
           to="contact"
@@ -48,7 +48,7 @@ const Home = () => {
         Services <span className="bg-gradient-to-r from-orange-500 to-red-500 text-transparent bg-clip-text">I Offer</span>
       </h2>
       <p className="text-center text-neutral-400 max-w-2xl mx-auto mb-12">
-        I offer flexible and budget-friendly web solutions — whether you're just starting out or scaling up. Here’s how I can help:
+        We offer flexible and budget-friendly web solutions — whether you're just starting out or scaling up. Here’s how we can help you:
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto px-6">
@@ -111,7 +111,7 @@ const Home = () => {
       >
         <h2 className="text-3xl font-bold mb-6">Ready to Start Your Web Journey?</h2>
         <p className="mb-8 text-lg text-neutral-400 max-w-3xl mx-auto">
-          Whether you need a sleek portfolio, a business website, or an online store — I’m here to make it happen. Let’s connect and build something amazing together.
+          Whether you need a sleek portfolio, a business website, or an online store — We're here to make it happen. Let’s connect and build something amazing together.
         </p>
         <Link
           to="contact"

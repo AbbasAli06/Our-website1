@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import logo from "../assets/logo.png";
+import logo from "../assets/I.png";
 import { navItems } from "../constants";
 
 const Navbar = () => {
@@ -17,15 +17,15 @@ const Navbar = () => {
         
         {/* Logo & Branding */}
         <div className="flex items-center flex-shrink-0">
-          <img className="h-12 w-12 mr-3" src={logo} alt="Logo" />
-          <Link to="/" className="text-2xl font-semibold tracking-wide">Tajix</Link>
+          <img className="w-[200px] h-[100px]" src={logo} alt="I" />
         </div>
 
         {/* Desktop Navigation */}
         <ul className="hidden lg:flex space-x-10">
           {navItems.map((item, index) => (
             <li key={index} className="hover:text-orange-500 transition-all">
-              <Link to={item.href}>{item.label}</Link>
+              <Link to={item.href}>{item.label}</
+              Link>
             </li>
           ))}
         </ul>

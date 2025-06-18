@@ -3,14 +3,24 @@ import { portfolioItems } from "../constants";
 import { motion } from "framer-motion";
 
 const Portfolio = () => {
+  // Override the portfolio items with new titles and specific links
+  const updatedPortfolioItems = portfolioItems.map((item, index) => ({
+    ...item,
+    title: `Project ${index + 1}`,
+    liveLink: index === 0 ? "https://pharbetter.com/" : 
+              index === 1 ? "https://jimq.in/" : 
+              index === 2 ? "https://myprojectsa.netlify.app/task%201/app" : 
+              item.liveLink
+  }));
+
   return (
     <section className="bg-gradient-to-br from-black via-gray-900 to-black text-white py-20">
       <h2 className="text-4xl font-bold text-center mb-12">
-        Recent <span className="bg-gradient-to-r from-orange-500 to-red-500 text-transparent bg-clip-text">Projects</span>
+        Our <span className="bg-gradient-to-r from-orange-500 to-red-500 text-transparent bg-clip-text">Projects</span>
       </h2>
-
+      
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto px-6">
-        {portfolioItems.map(({ title, description, image, technologies, category, github, liveLink }, idx) => (
+        {updatedPortfolioItems.map(({ title, description, image, technologies, category, github, liveLink }, idx) => (
           <motion.div 
             key={idx}
             initial={{ opacity: 0, scale: 0.95 }} 
@@ -25,13 +35,13 @@ const Portfolio = () => {
                 <p className="text-sm text-white">{description}</p>
               </div>
             </div>
-
+            
             {/* Project Title & Tech Stack */}
             <div className="mt-4 flex justify-between items-center">
               <h3 className="text-2xl font-semibold text-orange-400">{title}</h3>
               <span className="text-sm bg-gray-800 text-orange-500 px-2 py-1 rounded">{category}</span>
             </div>
-
+            
             {/* Technologies Used */}
             <div className="flex flex-wrap gap-2 mt-3">
               {technologies.map((tech, techIndex) => (
@@ -40,13 +50,13 @@ const Portfolio = () => {
                 </span>
               ))}
             </div>
-
+            
             {/* Links to Code & Live Demo */}
             <div className="flex justify-between mt-5">
-              <a href={github} target="_blank" rel="noopener noreferrer" className="flex items-center text-orange-500 hover:text-orange-400 transition">
+              {/* <a href={github} target="_blank" rel="noopener noreferrer" className="flex items-center text-orange-500 hover:text-orange-400 transition">
                 <Code className="mr-2" size={18} />
                 Code
-              </a>
+              </a> */}
               <a href={liveLink} target="_blank" rel="noopener noreferrer" className="flex items-center text-orange-500 hover:text-orange-400 transition">
                 <ExternalLink className="mr-2" size={18} />
                 Live Demo

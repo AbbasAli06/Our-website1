@@ -10,7 +10,7 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold text-orange-500 mb-4">About Me</h3>
           <p className="text-sm">
-            I'm a freelance web developer specializing in modern, high-performance websites and applications. I work with React, Next.js, Tailwind CSS, and WordPress to bring ideas to life.
+            We're a team of web developers specializing in modern, high-performance websites and applications. We work with HTML, JavaScript, React.js, Node.js, Next.js, Tailwind CSS, and WordPress to materialize your ideas.
           </p>
           <Link to="/about" className="mt-4 inline-block text-orange-500 hover:text-orange-400 transition">
             Learn More →
@@ -24,7 +24,7 @@ const Footer = () => {
             <li><Link to="/services" className="hover:text-orange-500 transition">Services</Link></li>
             <li><Link to="/portfolio" className="hover:text-orange-500 transition">Portfolio</Link></li>
             <li><Link to="/testimonials" className="hover:text-orange-500 transition">Testimonials</Link></li>
-            <li><Link to="/contact" className="hover:text-orange-500 transition">Contact</Link></li>
+            <li><Link to="/contact" className="hover:text-orange-500 transition">Contact Us</Link></li>
           </ul>
         </div>
 

@@ -32,7 +32,7 @@ const Contact = () => {
 
   return (
     <section className="bg-gradient-to-br from-black via-gray-900 to-black text-white py-20">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="mt-16 max-w-5xl mx-auto p-8 bg-gray-900 rounded-xl shadow-lg border border-gray-700 hover:shadow-orange-500 transition-transform duration-300 transform hover:scale-105">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -43,12 +43,12 @@ const Contact = () => {
             Get in <span className="bg-gradient-to-r from-orange-500 to-red-500 text-transparent bg-clip-text">Touch</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Have a project in mind or want to discuss opportunities? I'd love to hear from you! 
+            Have a project in your mind or want to discuss opportunities? We'd love to hear from you! 
             Let's create something amazing together.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid-column: 1 / -1;">
           {/* Contact Information */}
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
@@ -56,11 +56,13 @@ const Contact = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-xl border border-gray-700"
           >
-            <h3 className="text-2xl font-bold mb-8 bg-gradient-to-r from-orange-400 to-orange-600 text-transparent bg-clip-text">
-              Let's Connect
+            <h3 className="text-4xl font-bold mb-8 bg-gradient-to-r from-orange-400 to-orange-600 text-transparent bg-clip-text flex flex-col sm:flex-row gap-4 justify-center contact-buttons">
+              Contact Us
             </h3>
+            <br></br>
             
-            <div className="space-y-8">
+            {/* Contact information in a row above the image */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="flex items-start">
                 <div className="bg-gradient-to-r from-orange-500 to-red-500 p-3 rounded-lg mr-4">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -68,9 +70,9 @@ const Contact = () => {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold mb-1">Email Me</h4>
+                  <h4 className="text-lg font-semibold mb-1">Email us</h4>
                   <a href="mailto:contact@yourportfolio.com" className="text-gray-300 hover:text-orange-400 transition-colors">
-                    skshahbaz783@gmail.com
+                    Robustarktech@gmail.com
                   </a>
                 </div>
               </div>
@@ -82,8 +84,11 @@ const Contact = () => {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold mb-1">Call Me</h4>
-                  <a href="tel:+1234567890" className="text-gray-300 hover:text-orange-400 transition-colors">
+                  <h4 className="text-lg font-semibold mb-1">Contact no</h4>
+                  <a href="tel:+917330225080" className="text-gray-300 hover:text-orange-400 transition-colors block">
+                    +91 7330225080
+                  </a>
+                  <a href="tel:+919515397556" className="text-gray-300 hover:text-orange-400 transition-colors block">
                     +91 9515397556
                   </a>
                 </div>
@@ -99,14 +104,40 @@ const Contact = () => {
                 <div>
                   <h4 className="text-lg font-semibold mb-1">Location</h4>
                   <p className="text-gray-300">
-                    Hyderabad , India<br />
-                    Available for remote work worldwide
+                    Hyderabad, India
                   </p>
                 </div>
               </div>
+            </div>
+
+            <div className="space-y-8">
+
+              {/* Contact buttons moved below the image */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center contact-buttons">
+                <a
+                  href="https://wa.me/9515397556?text=Hi%20Shahbaz%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect!"
+                  target="_blank"
+                  className="bg-gray-800 hover:bg-orange-600 text-white font-semibold px-8 py-4 rounded-full inline-flex items-center justify-center gap-2 transition-all duration-300 transform hover:scale-105"
+                >
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                  </svg>
+                  Chat on WhatsApp
+                </a>
+                
+                <a
+                  href="mailto:skshahbaz783@gmail.com"
+                  className="bg-gray-800 hover:bg-orange-600 text-white font-semibold px-8 py-4 rounded-full inline-flex items-center justify-center gap-2 transition-all duration-300 transform hover:scale-105"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                  </svg>
+                  Send Email
+                </a>
+              </div>
               
-              <div className="mt-12">
-                <h4 className="text-lg font-semibold mb-4">Follow Me</h4>
+              {/* <div className="mt-12">
+                <h4 className="text-lg font-semibold mb-4">Follow us</h4>
                 <div className="flex space-x-4">
                   {socialLinks.map((social, index) => (
                     <motion.a
@@ -128,102 +159,10 @@ const Contact = () => {
                     </motion.a>
                   ))}
                 </div>
-              </div>
+              </div> */}
             </div>
           </motion.div>
           
-          {/* Contact Form */}
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }} 
-            animate={{ opacity: 1, scale: 1 }} 
-            transition={{ duration: 0.5, delay: 0.3 }} 
-            className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-xl border border-gray-700 hover:shadow-orange-500/20 transition-all duration-300 shadow-xl hover:shadow-lg"
-          >
-            <h3 className="text-2xl font-bold mb-8 bg-gradient-to-r from-orange-400 to-orange-600 text-transparent bg-clip-text">
-              Send a Message
-            </h3>
-            
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">
-                  Your Name
-                </label>
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  placeholder="John Doe"
-                  className="w-full p-3 rounded-md bg-gray-800 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500"
-                  onChange={handleChange}
-                  value={form.name}
-                  required
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-1">
-                  Email Address
-                </label>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="john@example.com"
-                  className="w-full p-3 rounded-md bg-gray-800 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500"
-                  onChange={handleChange}
-                  value={form.email}
-                  required
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-1">
-                  Your Message
-                </label>
-                <textarea
-                  name="message"
-                  id="message"
-                  placeholder="Tell me about your project..."
-                  rows="5"
-                  className="w-full p-3 rounded-md bg-gray-800 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500"
-                  onChange={handleChange}
-                  value={form.message}
-                  required
-                ></textarea>
-              </div>
-              
-              <div className="flex items-center">
-                <input
-                  type="checkbox"
-                  id="newsletter"
-                  className="h-4 w-4 text-orange-500 focus:ring-orange-500 border-gray-600 rounded bg-gray-700"
-                />
-                <label htmlFor="newsletter" className="ml-2 block text-sm text-gray-300">
-                  Subscribe to my newsletter for web development tips and updates
-                </label>
-              </div>
-
-              <motion.button
-                type="submit"
-                className="w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 transition-all text-white font-semibold py-3 rounded-md flex items-center justify-center"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? (
-                  <>
-                    <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                    </svg>
-                    Sending...
-                  </>
-                ) : (
-                  "Send Message"
-                )}
-              </motion.button>
-            </form>
-          </motion.div>
         </div>
         
         

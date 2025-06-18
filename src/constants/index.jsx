@@ -49,7 +49,7 @@ export const features = [
   {
     icon: <RocketIcon />,
     text: "Performance Optimization",
-    description: "Lightning-fast websites that load in under 2 seconds."
+    description: "Lightning-fast websites that load in under 5 seconds."
   },
   {
     icon: <SupportIcon />,
@@ -86,7 +86,7 @@ export const portfolioItems = [
     image: "https://images.unsplash.com/photo-1607082350899-7e105aa886ae?q=80&w=500&auto=format&fit=crop",
     category: "Web Application",
     technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-    github: "https://github.com/yourusername/ecommerce-project",
+    // github: "https://github.com/yourusername/ecommerce-project",
     liveLink: "https://your-ecommerce-demo.com"
   },
   {

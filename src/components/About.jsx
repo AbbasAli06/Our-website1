@@ -8,7 +8,7 @@ const About = () => {
         Creative <span className="bg-gradient-to-r from-orange-500 to-red-500 text-transparent bg-clip-text">Freelance Team</span> Delivering Results
       </h2>
       <p className="text-md lg:text-xl text-neutral-400 max-w-4xl mx-auto text-center mb-10">
-        We are a duo of passionate web developers committed to helping individuals, startups, 
+        We are a team of passionate web developers committed to helping individuals, startups, 
         and businesses build powerful digital experiences. With a perfect blend of design and code, 
         we create fast, secure, and beautiful websites that truly stand out.
       </p>
@@ -57,7 +57,7 @@ const About = () => {
           </div>
         </div>
         <p className="mt-8 text-center text-neutral-400 max-w-3xl mx-auto">
-          As a two-person team, we combine our unique skills — from UI/UX and frontend magic to backend power 
+          As a team, we combine our unique skills — from UI/UX and frontend magic to backend power 
           and deployment — to build tailored, reliable, and scalable web solutions that truly reflect your brand.
         </p>
       </motion.div>

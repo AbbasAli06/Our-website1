@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import video1 from "../assets/video1.mp4";
 import video2 from "../assets/video2.mp4";
+import React from 'react';
+// import poster1 from "../assets/poster1.jpg";
 
 const Home = () => {
   return (
@@ -13,9 +15,9 @@ const Home = () => {
         transition={{ duration: 0.5 }}
         className="text-4xl sm:text-6xl lg:text-7xl text-center tracking-wide mb-6"
       >
-        Turn Ideas Into {" "}
+        Design That Floats. {" "}
         <span className="bg-gradient-to-r from-orange-500 to-red-800 text-transparent bg-clip-text">
-          Impactful Websites
+        Code That Anchors.
         </span>
       </motion.h1>
 
@@ -25,7 +27,7 @@ const Home = () => {
         transition={{ duration: 0.5, delay: 0.2 }}
         className="text-lg text-center text-neutral-400 max-w-4xl mx-auto mb-10"
       >
-        We're a team of web developers focused on helping startups, individuals, and small businesses grow online with modern, high-performance websites. From eye-catching designs to functional e-commerce stores — we’ll bring your vision to reality.
+        Robust Ark Tech partners with startups, founders, and small businesses to turn visions into thriving digital realities. We combine Design That Floats – creating captivating, user-centric experiences – with Code That Anchors – delivering rock-solid performance and security. The result? An online presence that’s as resilient as it is remarkable.
       </motion.p>
 
       <div className="flex flex-col sm:flex-row justify-center gap-4 mb-16">
@@ -39,13 +41,13 @@ const Home = () => {
           to="contact"
           className="py-3 px-6 rounded-md border border-orange-500 text-orange-500 transition hover:bg-orange-500/10 text-center"
         >
-          Let's Discuss Your Project
+         Discuss Your Project
         </Link>
       </div>
 
       {/* Services Section */}
       <h2 className="text-3xl font-bold text-center mb-2">
-        Services <span className="bg-gradient-to-r from-orange-500 to-red-500 text-transparent bg-clip-text">I Offer</span>
+        Services <span className="bg-gradient-to-r from-orange-500 to-red-500 text-transparent bg-clip-text">we Offer</span>
       </h2>
       <p className="text-center text-neutral-400 max-w-2xl mx-auto mb-12">
         We offer flexible and budget-friendly web solutions — whether you're just starting out or scaling up. Here’s how we can help you:
@@ -73,6 +75,32 @@ const Home = () => {
         ))}
       </div>
 
+{/* New Two-Column Container Above Videos
+<div className="flex flex-col lg:flex-row mt-14 justify-center gap-6 w-full max-w-6xl mx-auto px-6">
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5 }}
+    className="flex-1"
+  >
+    <div className="rounded-xl w-full border border-orange-700 shadow-lg shadow-orange-400/20">
+      <span className="text-gray-500"><img src={poster1} alt="Poster 1" /></span>
+    </div>
+  </motion.div>
+
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.5, delay: 0.2 }}
+    className="flex-1"
+  >
+    <div className="rounded-xl w-full border border-orange-700 shadow-lg shadow-orange-400/20">
+      <span className="text-gray-500">Client Success Image</span>
+    </div>
+  </motion.div>
+
+
+</div>
       {/* Video Showcase */}
       <div className="flex flex-col lg:flex-row mt-14 justify-center gap-6 w-full max-w-6xl mx-auto px-6">
         <motion.div
@@ -83,7 +111,6 @@ const Home = () => {
         >
           <video autoPlay loop muted className="rounded-xl w-full border border-orange-700 shadow-lg shadow-orange-400/20">
             <source src={video1} type="video/mp4" />
-            Your browser does not support the video tag.
           </video>
           <p className="text-center mt-2 font-medium">Project Showcase</p>
         </motion.div>
@@ -96,12 +123,11 @@ const Home = () => {
         >
           <video autoPlay loop muted className="rounded-xl w-full border border-orange-700 shadow-lg shadow-orange-400/20">
             <source src={video2} type="video/mp4" />
-            Your browser does not support the video tag.
           </video>
           <p className="text-center mt-2 font-medium">My Workflow</p>
         </motion.div>
       </div>
-
+      <div></div> 
       {/* Final CTA */}
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
